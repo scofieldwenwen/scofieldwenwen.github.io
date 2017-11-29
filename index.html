@@ -389,7 +389,7 @@
 <ul>
 <li><p>Hexo 初始化配置<br>  $ npm hexo init<br>  $ npm install </p>
 </li>
-<li><p>初始化之后， hexo 的结构目录如下:<img src="/2017-03-21 hexo github pager build blog/hexo files.png" alt=""></p>
+<li><p>初始化之后， hexo 的结构目录如下:<img src="http://p049pdhen.bkt.clouddn.com/blog_build_hexo%20files.png" alt=""></p>
 </li>
 <li><p>Hexo 常用的命令行：<br>  hexo help #查看帮助<br>  hexo init #初始化一个目录<br>  hexo new “postName” #新建文章<br>  hexo new page “pageName” #新建页面<br>  hexo generate #生成生成静态网页，可以在 public 目录查看整个网站的文件<br>  hexo server #本地预览，’Ctrl+C’关闭<br>  hexo deploy #部署.deploy目录<br>  hexo clean #清除缓存，强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹</p>
 <p>  简写：<br>  hexo n == hexo new<br>  hexo g == hexo generate<br>  hexo s == hexo server<br>  hexo d == hexo deploy</p>
@@ -398,17 +398,17 @@
 </li>
 <li><p>可以就可以查看第一个 hexo 默认生成的 blog ，输入命令：<br>   $ hexo generate</p>
 <pre><code>$ hexo server 
-</code></pre><p>   在浏览器查看本地静态网页：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>   <img src="http://i1.piimg.com/567571/fa4e53bbdce9190c.png" alt=""></p>
+</code></pre><p>   在浏览器查看本地静态网页：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>   <img src="http://p049pdhen.bkt.clouddn.com/blog_build_hexo%20local%20preview.png" alt=""></p>
 <pre><code>看到这个页面有点小激动，本地博客搭建起来了，不过只是个本地的网页而已，接下来就要把网页部署上去。
 </code></pre></li>
 </ul>
 <h2 id="将博客部署到-Github-Pages-上"><a href="#将博客部署到-Github-Pages-上" class="headerlink" title="将博客部署到 Github Pages 上"></a>将博客部署到 Github Pages 上</h2><ul>
 <li>准备一个 Github 账号，没有的就去<a href="https://github.com/" target="_blank" rel="external">官网</a>注册一个账号。</li>
-<li><p>创建一个仓库 repository，用来托管博客。仓库名必须为 [github用户名].github.io<br><img src="http://p1.bqimg.com/567571/81dae092c29341cc.png" alt=""></p>
+<li><p>创建一个仓库 repository，用来托管博客。仓库名必须为 [github用户名].github.io<br><img src="http://p049pdhen.bkt.clouddn.com/blog_build_github%20create%20repository.png" alt=""></p>
 </li>
 <li><p>配置 SSH 密钥教程：<a href="http://www.cnblogs.com/ayseeing/p/3572582.html" target="_blank" rel="external">github 设置添加 SSH</a></p>
 </li>
-<li>将本地的 Hexo 文件同步到 Github 的仓库中：<br>复制刚才创建仓库的 HTTPS 链接<br><img src="http://i1.piimg.com/567571/c6792d01f38b5ece.png" alt=""><br>将链接粘贴到 Hexo 文件目录的 _config.yml 配置文件上保存：<pre><code>deploy:
+<li>将本地的 Hexo 文件同步到 Github 的仓库中：<br>复制刚才创建仓库的 HTTPS 链接<br><img src="http://p049pdhen.bkt.clouddn.com/blog_build_github%20clone%20repository.png" alt=""><br>将链接粘贴到 Hexo 文件目录的 _config.yml 配置文件上保存：<pre><code>deploy:
 </code></pre>  type: git<pre><code>repo: https://github.com/scofieldwenwen/scofieldwenwen.github.io.git
 branch: master
 </code></pre><strong>注意</strong>：配置文件键值之间必须有个空格<br>将博客部署上去：<br>   $ hexo g<br> $ hexo d<br>或者直接输入<br> $ hexo g -d<br>在浏览器查看 Github Pages，在浏览器输入 username.github.io (我的是scofieldwenwen.github.io) 就可以看到自己的博客了!到这里一个免费的博客就创建好了。</li>
@@ -425,7 +425,7 @@ branch: master
 <h2 id="将自己的域名关联上-Github-Pages-上"><a href="#将自己的域名关联上-Github-Pages-上" class="headerlink" title="将自己的域名关联上 Github Pages 上"></a>将自己的域名关联上 Github Pages 上</h2><ul>
 <li>购买一个域名，我的是在<a href="https://wanwang.aliyun.com/domain/" target="_blank" rel="external"> 阿里云 </a>上购买的。</li>
 <li>配置 CNAME 文件<br>在 \hexo\source 文件夹下创建文件 CNAME （没有后缀名），编辑内容，填写申请的域名。</li>
-<li>修改 DNS<br><img src="http://p1.bqimg.com/567571/09b21931aedcfb90.png" alt=""></li>
+<li>修改 DNS<br><img src="http://p049pdhen.bkt.clouddn.com/blog_build_ali%20cloud%20dns.png" alt=""></li>
 <li><strong>注意:</strong> 不能有不能有相同的主机记录,比如我的邮箱也有 @ 的主机记录,我就不需要邮箱就把它删了。</li>
 </ul>
 <h2 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h2><ul>
