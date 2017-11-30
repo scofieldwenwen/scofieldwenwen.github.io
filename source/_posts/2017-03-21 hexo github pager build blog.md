@@ -2,11 +2,12 @@
 date: 2017/7/15 20:46:25
 upate: 2017/7/17 15:17:00
 language: zh-Hans
+categories: Blog Build
 tags:
   - Hexo
 title: Hexo + Github 搭建个人博客
 ---
-欢迎来到 [scofieldwenwen 的个人博客](http://scofieldwenwen.com)，受到[ stormzhang ](http://stormzhang.com)的影响，决定开始搭建自己的博客.该文是我自己搭建博客的过程，采用的是 Hexo 博客框架管理，使用 Github 托管，将自己的域名关联到 Github Pages 上。
+欢迎来到 [scofieldwenwen 的个人博客](http://scofieldwenwen.com)，受到[ stormzhang ](http://stormzhang.com)的影响，决定开始搭建自己的博客。该文是我自己搭建博客的过程，采用的是 Hexo 博客框架管理，使用 Github 托管，将自己的域名关联到 Github Pages 上。
 
 ## 安装 git
 * 在 Windows 平台下载安装 Git， [点击下载Git](https://git-for-windows.github.io/)
