@@ -3,9 +3,99 @@
   
     
     <entry>
+      <title><![CDATA[Chrome 快捷键大全]]></title>
+      <url>/2018/05/02/%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</url>
+      <content type="html"><![CDATA[<p>从2013年开始使用 Chrome 浏览器，简洁好用。以前是用来专门科学上网，后来工作发现 Chrome 是开发必备。今天整理了一下Chrome的快捷键，有些挺常用，熟悉掌握快捷键，甚至不要鼠标就可以装逼了。</p>
+<h2 id="标签和窗口"><a href="#标签和窗口" class="headerlink" title="标签和窗口"></a>标签和窗口</h2><ul>
+<li>同个窗口新建标签：Ctrl + T</li>
+<li>重新打开最后关闭的标签页：Ctrl + Shift + T</li>
+<li>打开新建窗口： Ctrl + N</li>
+<li>打开新的无痕窗口：Shift + Ctrl + N</li>
+<li>标签内打开 Home 页面：Alt  + Home</li>
+<li>同个标签前进 / 后退：Alt + Right  /  Alt + Left</li>
+<li>向左切换标签：Ctrl + Tab  /  Ctrl + PgDn</li>
+<li>向右切换标签：Ctrl + Shift + Tab   /  Ctrl + PgUp</li>
+<li>关闭标签：Ctrl + W  /  Ctrl + F4</li>
+<li>关闭窗口：Alt + F4  /  Ctrl + Shift + W</li>
+<li>关闭浏览器：Ctrl + Shift + Q</li>
+<li>最小化当前窗口：Alt + 空格键 + N</li>
+<li>最大化当前窗口：Alt + 空格键 + X</li>
+<li>在新的后台标签页中打开链接：Ctrl + 单击  /  鼠标滚轮单机</li>
+<li>打开链接，并跳转到该链接：Ctrl + Shift + 单击</li>
+<li>在新窗口打开链接： Shift + 单击</li>
+<li>用鼠标在标签中打开链接：将链接拖到标签页中</li>
+<li>在最大化模式和窗口模式间切换：双击标签栏的空白区域</li>
+</ul>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>下载内容：Ctrl + J</li>
+<li>历史记录：Ctrl + H</li>
+<li>开发者工具：F12  /   Ctrl + Shift + J  /   Ctrl + Shift + I</li>
+<li>保存网页：Ctrl + S</li>
+<li>添加书签：Ctrl + D</li>
+<li>添加所有打开的网页添加书签：Ctrl + Shift + D</li>
+<li>书签管理器：Ctrl + Shift + O</li>
+<li>用浏览器打开文件：Ctrl + O</li>
+<li>任务管理器：Shift + Esc</li>
+<li>清除历史记录：Ctrl + Shift + Del</li>
+</ul>
+<h2 id="地址栏"><a href="#地址栏" class="headerlink" title="地址栏"></a>地址栏</h2><ul>
+<li>使用其他搜索引擎进行搜索：Tab</li>
+<li>为网站名称添加 www. 和 .com：Ctrl + Enter</li>
+</ul>
+<ul>
+<li>地址栏搜索：Ctrl + K  /  Ctrl + E</li>
+<li>跳转到地址栏：Ctrl + l   /   Alt + D   /   F6</li>
+<li>站内搜索：关键字 + site：网址</li>
+</ul>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><ul>
+<li>先下翻页：PgUp</li>
+<li>向上翻页：PgDn</li>
+<li>打印：Ctrl + P</li>
+<li>搜索：Ctrl + F</li>
+<li>刷新：Ctrl + R  /  F5   /   Ctrl + F5</li>
+<li>滑动到最顶部：Home</li>
+<li>滑动到最底部：End</li>
+<li>调整页面字体大小：Ctrl + ‘’+’’  /  Ctrl + ‘’-‘’  或者 Ctrl + 鼠标滚轮上/下</li>
+<li>页面字体恢复默认：Ctrl + 0</li>
+<li>全屏切换：F11</li>
+</ul>
+<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul>
+<li>同个窗口新建标签：Ctrl + T</li>
+<li>重新打开最后关闭的标签页：Ctrl + Shift + T</li>
+<li>在新的后台标签页中打开链接：Ctrl + 单击  /  鼠标滚轮单机</li>
+<li>打开链接，并跳转到该链接：Ctrl + Shift + 单击</li>
+<li>关闭标签：Ctrl + W  </li>
+<li>同个标签浏览历史前进 / 后退：Alt + Right  /  Alt + Left</li>
+<li>添加书签：Ctrl + D</li>
+<li>下载内容：Ctrl + J</li>
+<li>历史记录：Ctrl + H</li>
+<li>切换标签：Ctrl + Tab  /  Ctrl + PgDn</li>
+<li>向右切换标签：Ctrl + Shift + Tab   /  Ctrl + PgUp</li>
+<li>标签内打开 Home 页面：Alt  + Home</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> skill </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Chrome </tag>
+            
+            <tag> Tool </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo + Github 搭建个人博客]]></title>
-      <url>/2017/07/15/2017-03-21%20hexo%20github%20pager%20build%20blog/</url>
-      <content type="html"><![CDATA[<p>欢迎来到 <a href="http://scofieldwenwen.com">scofieldwenwen 的个人博客</a>，受到<a href="http://stormzhang.com" target="_blank" rel="external"> stormzhang </a>的影响，决定开始搭建自己的博客.该文是我自己搭建博客的过程，采用的是 Hexo 博客框架管理，使用 Github 托管，将自己的域名关联到 Github Pages 上。</p>
+      <url>/2017/07/15/hexo%20github%20pager%20build%20blog/</url>
+      <content type="html"><![CDATA[<p>欢迎来到 <a href="http://scofieldwenwen.com">scofieldwenwen 的个人博客</a>，受到<a href="http://stormzhang.com" target="_blank" rel="external"> stormzhang </a>的影响，决定开始搭建自己的博客。该文是我自己搭建博客的过程，采用的是 Hexo 博客框架管理，使用 Github 托管，将自己的域名关联到 Github Pages 上。</p>
 <h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><ul>
 <li>在 Windows 平台下载安装 Git， <a href="https://git-for-windows.github.io/" target="_blank" rel="external">点击下载Git</a></li>
 <li>安装教程: <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000" target="_blank" rel="external">在 Windows 上安装 Git</a></li>
@@ -74,7 +164,7 @@ branch: master
       
         <categories>
             
-            <category> Blog Build </category>
+            <category> Blog </category>
             
         </categories>
         
