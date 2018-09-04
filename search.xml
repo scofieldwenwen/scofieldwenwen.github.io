@@ -61,32 +61,17 @@
 <li><p>清空指定包名对应的应用的数据和缓存文件<br><code>adb shell pm clear your.package.name</code></p>
 </li>
 </ul>
-<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><ul>
-<li><p>将电脑文件复制到设备sd卡上<br><code>adb push 电脑文件路径  /sdcard</code></p>
-</li>
-<li><p>设备文件复制到电脑上<br><code>adb pull /sdcard/text.txt 电脑文件路径</code></p>
-</li>
-<li><p>删除<br><code>adb shell rm /sdcard/text.txt</code><br> -f 强制删除文件不需要确认<br> -r 递归删除文件夹内文件<br> -i 删除文件前需要确认</p>
-</li>
-<li><p>创建目录<br><code>adb shell mkdir -p  /sdcard/temp/test/</code><br>指定 -p 递归创建目录</p>
-</li>
-<li><p>创建文件<br><code>adb shell touch /sdcard/text.txt</code></p>
-</li>
-<li><p>复制文件<br><code>adb shell cp /sdcard/text.txt  /sdcard/test/</code></p>
-</li>
-<li><p>移动文件<br><code>adb shell mv /sdcard/1.txt /sdcard/2.text</code><br>移动同一目录下文件相当于重命名文件</p>
-</li>
-</ul>
-<h3 id="其他一些命令"><a href="#其他一些命令" class="headerlink" title="其他一些命令"></a>其他一些命令</h3><ul>
-<li><p>申请 toot 权限<br><code>adb shell</code><br><code>su</code></p>
-</li>
-<li><p>查看手机上所有的包名<br><code>adb shell</code><br><code>cd data/data ; ls</code></p>
-</li>
-<li><p><strong>Linux 多个命令行一起执行可以用 “;” 或者 “&amp;&amp;” 进行分割</strong><br><code>cd data/data ; ls</code></p>
-</li>
-<li><p>adb shell 查看文件后退出<br><code>exit</code>  或者 Ctrl + D</p>
-</li>
-</ul>
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><h4 id="1-将电脑文件复制到设备sd卡上"><a href="#1-将电脑文件复制到设备sd卡上" class="headerlink" title="1. 将电脑文件复制到设备sd卡上"></a>1. 将电脑文件复制到设备sd卡上</h4><p>  <code>adb push 电脑文件路径  /sdcard</code></p>
+<h4 id="2-设备文件复制到电脑上"><a href="#2-设备文件复制到电脑上" class="headerlink" title="2. 设备文件复制到电脑上"></a>2. 设备文件复制到电脑上</h4><p>  <code>adb pull /sdcard/text.txt 电脑文件路径</code></p>
+<h4 id="3-删除"><a href="#3-删除" class="headerlink" title="3. 删除"></a>3. 删除</h4><p>  <code>adb shell rm /sdcard/text.txt</code><br>   -f 强制删除文件不需要确认<br>   -r 递归删除文件夹内文件<br>   -i 删除文件前需要确认</p>
+<h4 id="4-创建目录"><a href="#4-创建目录" class="headerlink" title="4. 创建目录"></a>4. 创建目录</h4><p>  <code>adb shell mkdir -p  /sdcard/temp/test/</code><br>  指定 -p 递归创建目录</p>
+<h4 id="5-创建文件"><a href="#5-创建文件" class="headerlink" title="5. 创建文件"></a>5. 创建文件</h4><p>  <code>adb shell touch /sdcard/text.txt</code></p>
+<h4 id="6-复制文件"><a href="#6-复制文件" class="headerlink" title="6. 复制文件"></a>6. 复制文件</h4><p>  <code>adb shell cp /sdcard/text.txt  /sdcard/test/</code></p>
+<h4 id="7-移动文件"><a href="#7-移动文件" class="headerlink" title="7. 移动文件"></a>7. 移动文件</h4><p>  <code>adb shell mv /sdcard/1.txt /sdcard/2.text</code><br>  移动同一目录下文件相当于重命名文件</p>
+<h3 id="其他一些命令"><a href="#其他一些命令" class="headerlink" title="其他一些命令"></a>其他一些命令</h3><h4 id="1-申请-toot-权限"><a href="#1-申请-toot-权限" class="headerlink" title="1. 申请 toot 权限"></a>1. 申请 toot 权限</h4><p>  <code>adb shell</code><br>  <code>su</code></p>
+<h4 id="2-查看手机上所有的包名"><a href="#2-查看手机上所有的包名" class="headerlink" title="2. 查看手机上所有的包名"></a>2. 查看手机上所有的包名</h4><p>  <code>adb shell</code><br>  <code>cd data/data ; ls</code></p>
+<h4 id="3-Linux-多个命令行一起执行可以用-“-”-或者-“-amp-amp-”-进行分割"><a href="#3-Linux-多个命令行一起执行可以用-“-”-或者-“-amp-amp-”-进行分割" class="headerlink" title="3. Linux 多个命令行一起执行可以用 “;” 或者 “&amp;&amp;” 进行分割"></a>3. <strong>Linux 多个命令行一起执行可以用 “;” 或者 “&amp;&amp;” 进行分割</strong></h4><p>  <code>cd data/data ; ls</code></p>
+<h4 id="4-adb-shell-查看文件后退出"><a href="#4-adb-shell-查看文件后退出" class="headerlink" title="4. adb shell 查看文件后退出"></a>4. adb shell 查看文件后退出</h4><p>  <code>exit</code>  或者 Ctrl + D</p>
 <h3 id="adb-官方链接"><a href="#adb-官方链接" class="headerlink" title="adb 官方链接"></a>adb 官方链接</h3><p> <a href="https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn" target="_blank" rel="external">https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn</a></p>
 ]]></content>
       
