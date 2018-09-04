@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Chrome,Tool," />
+  <meta name="keywords" content="-adb," />
 
 
 
@@ -87,31 +87,46 @@
 
 
 
-<meta name="description" content="从2013年开始使用 Chrome 浏览器，简洁好用。以前是用来专门科学上网，后来工作发现 Chrome 是开发必备。今天整理了一下Chrome的快捷键，有些挺常用，熟悉掌握快捷键，甚至不要鼠标就可以装逼了。
-标签和窗口
-同个窗口新建标签：Ctrl + T
-重新打开最后关闭的标签页：Ctrl + Shift + T
-打开新建窗口： Ctrl + N
-打开新的无痕窗口：Shift + Ctrl +">
+<meta name="description" content="调试相关1. adb 服务
+开启服务 adb start-sever
+关闭服务adb stop-server
+
+2. 设备
+列出设备及其idadb devices
+使用特定设备操作adb -s device_id例如：adb -s 47db0de20304 shell
+
+3. 重启
+正常重启adb reboot
+重启到 bootloader (刷机模式)adb reboot bootloader">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Chrome 快捷键大全">
-<meta property="og:url" content="http://scofieldwenwen.com/2018/05/02/快捷键大全/index.html">
+<meta property="og:title" content="adb 常用命令">
+<meta property="og:url" content="http://scofieldwenwen.com/2018/09/04/adb常用命令/index.html">
 <meta property="og:site_name" content="scofieldwenwen">
-<meta property="og:description" content="从2013年开始使用 Chrome 浏览器，简洁好用。以前是用来专门科学上网，后来工作发现 Chrome 是开发必备。今天整理了一下Chrome的快捷键，有些挺常用，熟悉掌握快捷键，甚至不要鼠标就可以装逼了。
-标签和窗口
-同个窗口新建标签：Ctrl + T
-重新打开最后关闭的标签页：Ctrl + Shift + T
-打开新建窗口： Ctrl + N
-打开新的无痕窗口：Shift + Ctrl +">
-<meta property="og:updated_time" content="2018-05-02T12:37:00.495Z">
+<meta property="og:description" content="调试相关1. adb 服务
+开启服务 adb start-sever
+关闭服务adb stop-server
+
+2. 设备
+列出设备及其idadb devices
+使用特定设备操作adb -s device_id例如：adb -s 47db0de20304 shell
+
+3. 重启
+正常重启adb reboot
+重启到 bootloader (刷机模式)adb reboot bootloader">
+<meta property="og:updated_time" content="2018-09-04T07:43:59.917Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chrome 快捷键大全">
-<meta name="twitter:description" content="从2013年开始使用 Chrome 浏览器，简洁好用。以前是用来专门科学上网，后来工作发现 Chrome 是开发必备。今天整理了一下Chrome的快捷键，有些挺常用，熟悉掌握快捷键，甚至不要鼠标就可以装逼了。
-标签和窗口
-同个窗口新建标签：Ctrl + T
-重新打开最后关闭的标签页：Ctrl + Shift + T
-打开新建窗口： Ctrl + N
-打开新的无痕窗口：Shift + Ctrl +">
+<meta name="twitter:title" content="adb 常用命令">
+<meta name="twitter:description" content="调试相关1. adb 服务
+开启服务 adb start-sever
+关闭服务adb stop-server
+
+2. 设备
+列出设备及其idadb devices
+使用特定设备操作adb -s device_id例如：adb -s 47db0de20304 shell
+
+3. 重启
+正常重启adb reboot
+重启到 bootloader (刷机模式)adb reboot bootloader">
 
 
 
@@ -139,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://scofieldwenwen.com/2018/05/02/快捷键大全/"/>
+  <link rel="canonical" href="http://scofieldwenwen.com/2018/09/04/adb常用命令/"/>
 
 
 
 
 
-  <title> Chrome 快捷键大全 | scofieldwenwen </title>
+  <title> adb 常用命令 | scofieldwenwen </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -318,7 +333,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://scofieldwenwen.com/2018/05/02/快捷键大全/">
+    <link itemprop="mainEntityOfPage" href="http://scofieldwenwen.com/2018/09/04/adb常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Scofield Wu">
@@ -339,7 +354,7 @@
             
             
               
-                Chrome 快捷键大全
+                adb 常用命令
               
             
           </h1>
@@ -354,8 +369,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-02T19:41:37+08:00">
-                2018-05-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T15:17:14+08:00">
+                2018-09-04
               </time>
             
 
@@ -377,8 +392,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/skill/" itemprop="url" rel="index">
-                    <span itemprop="name">skill</span>
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
                   </a>
                 </span>
 
@@ -412,7 +427,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  664
+                  621
                 </span>
               
 
@@ -447,74 +462,89 @@
       
 
       
-        <p>从2013年开始使用 Chrome 浏览器，简洁好用。以前是用来专门科学上网，后来工作发现 Chrome 是开发必备。今天整理了一下Chrome的快捷键，有些挺常用，熟悉掌握快捷键，甚至不要鼠标就可以装逼了。</p>
-<h2 id="标签和窗口"><a href="#标签和窗口" class="headerlink" title="标签和窗口"></a>标签和窗口</h2><ul>
-<li>同个窗口新建标签：Ctrl + T</li>
-<li>重新打开最后关闭的标签页：Ctrl + Shift + T</li>
-<li>打开新建窗口： Ctrl + N</li>
-<li>打开新的无痕窗口：Shift + Ctrl + N</li>
-<li>标签内打开 Home 页面：Alt  + Home</li>
-<li>同个标签前进 / 后退：Alt + Right  /  Alt + Left</li>
-<li>向左切换标签：Ctrl + Tab  /  Ctrl + PgDn</li>
-<li>向右切换标签：Ctrl + Shift + Tab   /  Ctrl + PgUp</li>
-<li>关闭标签：Ctrl + W  /  Ctrl + F4</li>
-<li>关闭窗口：Alt + F4  /  Ctrl + Shift + W</li>
-<li>关闭浏览器：Ctrl + Shift + Q</li>
-<li>最小化当前窗口：Alt + 空格键 + N</li>
-<li>最大化当前窗口：Alt + 空格键 + X</li>
-<li>在新的后台标签页中打开链接：Ctrl + 单击  /  鼠标滚轮单机</li>
-<li>打开链接，并跳转到该链接：Ctrl + Shift + 单击</li>
-<li>在新窗口打开链接： Shift + 单击</li>
-<li>用鼠标在标签中打开链接：将链接拖到标签页中</li>
-<li>在最大化模式和窗口模式间切换：双击标签栏的空白区域</li>
+        <h3 id="调试相关"><a href="#调试相关" class="headerlink" title="调试相关"></a>调试相关</h3><h4 id="1-adb-服务"><a href="#1-adb-服务" class="headerlink" title="1. adb 服务"></a>1. adb 服务</h4><ul>
+<li>开启服务<br> <code>adb start-sever</code></li>
+<li>关闭服务<br><code>adb stop-server</code></li>
 </ul>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
-<li>下载内容：Ctrl + J</li>
-<li>历史记录：Ctrl + H</li>
-<li>开发者工具：F12  /   Ctrl + Shift + J  /   Ctrl + Shift + I</li>
-<li>保存网页：Ctrl + S</li>
-<li>添加书签：Ctrl + D</li>
-<li>添加所有打开的网页添加书签：Ctrl + Shift + D</li>
-<li>书签管理器：Ctrl + Shift + O</li>
-<li>用浏览器打开文件：Ctrl + O</li>
-<li>任务管理器：Shift + Esc</li>
-<li>清除历史记录：Ctrl + Shift + Del</li>
+<h4 id="2-设备"><a href="#2-设备" class="headerlink" title="2. 设备"></a>2. 设备</h4><ul>
+<li>列出设备及其id<br><code>adb devices</code></li>
+<li>使用特定设备操作<br><code>adb -s device_id</code><br>例如：<code>adb -s 47db0de20304 shell</code></li>
 </ul>
-<h2 id="地址栏"><a href="#地址栏" class="headerlink" title="地址栏"></a>地址栏</h2><ul>
-<li>使用其他搜索引擎进行搜索：Tab</li>
-<li>为网站名称添加 www. 和 .com：Ctrl + Enter</li>
+<h4 id="3-重启"><a href="#3-重启" class="headerlink" title="3. 重启"></a>3. 重启</h4><ul>
+<li>正常重启<br><code>adb reboot</code></li>
+<li>重启到 bootloader (刷机模式)<br><code>adb reboot bootloader</code></li>
+<li>重启到 recovery (恢复模式)<br><code>adb reboot recovery</code></li>
 </ul>
+<h4 id="4-Monkey-测试"><a href="#4-Monkey-测试" class="headerlink" title="4. Monkey 测试"></a>4. Monkey 测试</h4><ul>
+<li>随机测试<br><code>adb shell monkey -p your.package.name 1000</code></li>
+<li>script文件测试<br><code>adb shell monkey -f /sdcard/xxx.script</code></li>
+</ul>
+<h4 id="5-查看进程"><a href="#5-查看进程" class="headerlink" title="5. 查看进程"></a>5. 查看进程</h4><ul>
+<li><p>列出进程列表及其pid<br><code>adb shell ps</code></p>
+</li>
+<li><p>杀死指定pid的进程<br><code>adb shell kill pid</code></p>
+</li>
+<li><p>查看指定进程信息<br><code>adb shell ps -x pid</code></p>
+</li>
+</ul>
+<h4 id="6-查看-service"><a href="#6-查看-service" class="headerlink" title="6. 查看 service"></a>6. 查看 service</h4><p>  <code>adb shell service list</code></p>
+<h4 id="7-查看系统当前内存使用情况"><a href="#7-查看系统当前内存使用情况" class="headerlink" title="7. 查看系统当前内存使用情况"></a>7. 查看系统当前内存使用情况</h4><p>  <code>adb shell cat /proc/meminfo</code></p>
 <ul>
-<li>地址栏搜索：Ctrl + K  /  Ctrl + E</li>
-<li>跳转到地址栏：Ctrl + l   /   Alt + D   /   F6</li>
-<li>站内搜索：关键字 + site：网址</li>
+<li>查看指定包名应用内存使用情况<br><code>adb shell dumpsys meminfo package</code></li>
 </ul>
-<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><ul>
-<li>先下翻页：PgUp</li>
-<li>向上翻页：PgDn</li>
-<li>打印：Ctrl + P</li>
-<li>搜索：Ctrl + F</li>
-<li>刷新：Ctrl + R  /  F5   /   Ctrl + F5</li>
-<li>滑动到最顶部：Home</li>
-<li>滑动到最底部：End</li>
-<li>调整页面字体大小：Ctrl + ‘’+’’  /  Ctrl + ‘’-‘’  或者 Ctrl + 鼠标滚轮上/下</li>
-<li>页面字体恢复默认：Ctrl + 0</li>
-<li>全屏切换：F11</li>
+<h4 id="8-Activity-调试"><a href="#8-Activity-调试" class="headerlink" title="8. Activity 调试"></a>8. Activity 调试</h4><ul>
+<li>启动应用<br><code>adb shell am start -n your.package.name/your.package.name-activity</code></li>
+<li>停止应用<br><code>adb shell am force-stop package</code></li>
+<li>查看当前 Activity 名称<br><code>adb shell dumpsys activity | findstr “mFocusedActivity”</code></li>
 </ul>
-<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul>
-<li>同个窗口新建标签：Ctrl + T</li>
-<li>重新打开最后关闭的标签页：Ctrl + Shift + T</li>
-<li>在新的后台标签页中打开链接：Ctrl + 单击  /  鼠标滚轮单机</li>
-<li>打开链接，并跳转到该链接：Ctrl + Shift + 单击</li>
-<li>关闭标签：Ctrl + W  </li>
-<li>同个标签浏览历史前进 / 后退：Alt + Right  /  Alt + Left</li>
-<li>添加书签：Ctrl + D</li>
-<li>下载内容：Ctrl + J</li>
-<li>历史记录：Ctrl + H</li>
-<li>切换标签：Ctrl + Tab  /  Ctrl + PgDn</li>
-<li>向右切换标签：Ctrl + Shift + Tab   /  Ctrl + PgUp</li>
-<li>标签内打开 Home 页面：Alt  + Home</li>
+<h3 id="设备应用管理"><a href="#设备应用管理" class="headerlink" title="设备应用管理"></a>设备应用管理</h3><p>（这里推荐一个Android Stuido 插件：<a href="https://github.com/pbreault/adb-idea" target="_blank" rel="external">ADB Idea </a> ）</p>
+<h4 id="1-安装apk"><a href="#1-安装apk" class="headerlink" title="1. 安装apk"></a>1. 安装apk</h4><ul>
+<li><p>安装<br><code>adb install xxx.apk</code></p>
+</li>
+<li><p>覆盖安装(保留缓存和数据)<br><code>adb install -r xxx.apk</code></p>
+</li>
 </ul>
+<h4 id="2-卸载应用"><a href="#2-卸载应用" class="headerlink" title="2. 卸载应用"></a>2. 卸载应用</h4><ul>
+<li><p>卸载<br><code>adb uninstall package</code></p>
+</li>
+<li><p>卸载时保留数据和缓存目录<br><code>adb uninstall -k package</code></p>
+</li>
+</ul>
+<h4 id="3-查看设备应用"><a href="#3-查看设备应用" class="headerlink" title="3. 查看设备应用"></a>3. 查看设备应用</h4><ul>
+<li><p>查看设备所有应用包名<br><code>adb shell pm list packages</code></p>
+</li>
+<li><p>列出指定包名对应的apk路径<br><code>adb shell pm path your.package.name</code></p>
+</li>
+<li><p>清空指定包名对应的应用的数据和缓存文件<br><code>adb shell pm clear your.package.name</code></p>
+</li>
+</ul>
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><ul>
+<li><p>将电脑文件复制到设备sd卡上<br><code>adb push 电脑文件路径  /sdcard</code></p>
+</li>
+<li><p>设备文件复制到电脑上<br><code>adb pull /sdcard/text.txt 电脑文件路径</code></p>
+</li>
+<li><p>删除<br><code>adb shell rm /sdcard/text.txt</code><br> -f 强制删除文件不需要确认<br> -r 递归删除文件夹内文件<br> -i 删除文件前需要确认</p>
+</li>
+<li><p>创建目录<br><code>adb shell mkdir -p  /sdcard/temp/test/</code><br>指定 -p 递归创建目录</p>
+</li>
+<li><p>创建文件<br><code>adb shell touch /sdcard/text.txt</code></p>
+</li>
+<li><p>复制文件<br><code>adb shell cp /sdcard/text.txt  /sdcard/test/</code></p>
+</li>
+<li><p>移动文件<br><code>adb shell mv /sdcard/1.txt /sdcard/2.text</code><br>移动同一目录下文件相当于重命名文件</p>
+</li>
+</ul>
+<h3 id="其他一些命令"><a href="#其他一些命令" class="headerlink" title="其他一些命令"></a>其他一些命令</h3><ul>
+<li><p>申请 toot 权限<br><code>adb shell</code><br><code>su</code></p>
+</li>
+<li><p>查看手机上所有的包名<br><code>adb shell</code><br><code>cd data/data ; ls</code></p>
+</li>
+<li><p><strong>Linux 多个命令行一起执行可以用 “;” 或者 “&amp;&amp;” 进行分割</strong><br><code>cd data/data ; ls</code></p>
+</li>
+<li><p>adb shell 查看文件后退出<br><code>exit</code>  或者 Ctrl + D</p>
+</li>
+</ul>
+<h3 id="adb-官方链接"><a href="#adb-官方链接" class="headerlink" title="adb 官方链接"></a>adb 官方链接</h3><p> <a href="https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn" target="_blank" rel="external">https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn</a></p>
 
       
     </div>
@@ -544,9 +574,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Chrome/" rel="tag"># Chrome</a>
-          
-            <a href="/tags/Tool/" rel="tag"># Tool</a>
+            <a href="/tags/adb/" rel="tag"># -adb</a>
           
         </div>
       
@@ -559,8 +587,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/15/hexo github pager build blog/" rel="next" title="Hexo + Github 搭建个人博客">
-                <i class="fa fa-chevron-left"></i> Hexo + Github 搭建个人博客
+              <a href="/2018/05/02/快捷键大全/" rel="next" title="Chrome 快捷键大全">
+                <i class="fa fa-chevron-left"></i> Chrome 快捷键大全
               </a>
             
           </div>
@@ -568,10 +596,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/04/adb常用命令/" rel="prev" title="adb 常用命令">
-                adb 常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -711,7 +735,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标签和窗口"><span class="nav-number">1.</span> <span class="nav-text">标签和窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#功能"><span class="nav-number">2.</span> <span class="nav-text">功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地址栏"><span class="nav-number">3.</span> <span class="nav-text">地址栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面"><span class="nav-number">4.</span> <span class="nav-text">页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用快捷键"><span class="nav-number">5.</span> <span class="nav-text">常用快捷键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#调试相关"><span class="nav-number">1.</span> <span class="nav-text">调试相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-adb-服务"><span class="nav-number">1.1.</span> <span class="nav-text">1. adb 服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-设备"><span class="nav-number">1.2.</span> <span class="nav-text">2. 设备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-重启"><span class="nav-number">1.3.</span> <span class="nav-text">3. 重启</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Monkey-测试"><span class="nav-number">1.4.</span> <span class="nav-text">4. Monkey 测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-查看进程"><span class="nav-number">1.5.</span> <span class="nav-text">5. 查看进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-查看-service"><span class="nav-number">1.6.</span> <span class="nav-text">6. 查看 service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-查看系统当前内存使用情况"><span class="nav-number">1.7.</span> <span class="nav-text">7. 查看系统当前内存使用情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-Activity-调试"><span class="nav-number">1.8.</span> <span class="nav-text">8. Activity 调试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设备应用管理"><span class="nav-number">2.</span> <span class="nav-text">设备应用管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装apk"><span class="nav-number">2.1.</span> <span class="nav-text">1. 安装apk</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-卸载应用"><span class="nav-number">2.2.</span> <span class="nav-text">2. 卸载应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-查看设备应用"><span class="nav-number">2.3.</span> <span class="nav-text">3. 查看设备应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件管理"><span class="nav-number">3.</span> <span class="nav-text">文件管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他一些命令"><span class="nav-number">4.</span> <span class="nav-text">其他一些命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adb-官方链接"><span class="nav-number">5.</span> <span class="nav-text">adb 官方链接</span></a></li></ol></div>
             
 
           </div>

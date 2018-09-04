@@ -3,6 +3,109 @@
   
     
     <entry>
+      <title><![CDATA[adb 常用命令]]></title>
+      <url>/2018/09/04/adb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      <content type="html"><![CDATA[<h3 id="调试相关"><a href="#调试相关" class="headerlink" title="调试相关"></a>调试相关</h3><h4 id="1-adb-服务"><a href="#1-adb-服务" class="headerlink" title="1. adb 服务"></a>1. adb 服务</h4><ul>
+<li>开启服务<br> <code>adb start-sever</code></li>
+<li>关闭服务<br><code>adb stop-server</code></li>
+</ul>
+<h4 id="2-设备"><a href="#2-设备" class="headerlink" title="2. 设备"></a>2. 设备</h4><ul>
+<li>列出设备及其id<br><code>adb devices</code></li>
+<li>使用特定设备操作<br><code>adb -s device_id</code><br>例如：<code>adb -s 47db0de20304 shell</code></li>
+</ul>
+<h4 id="3-重启"><a href="#3-重启" class="headerlink" title="3. 重启"></a>3. 重启</h4><ul>
+<li>正常重启<br><code>adb reboot</code></li>
+<li>重启到 bootloader (刷机模式)<br><code>adb reboot bootloader</code></li>
+<li>重启到 recovery (恢复模式)<br><code>adb reboot recovery</code></li>
+</ul>
+<h4 id="4-Monkey-测试"><a href="#4-Monkey-测试" class="headerlink" title="4. Monkey 测试"></a>4. Monkey 测试</h4><ul>
+<li>随机测试<br><code>adb shell monkey -p your.package.name 1000</code></li>
+<li>script文件测试<br><code>adb shell monkey -f /sdcard/xxx.script</code></li>
+</ul>
+<h4 id="5-查看进程"><a href="#5-查看进程" class="headerlink" title="5. 查看进程"></a>5. 查看进程</h4><ul>
+<li><p>列出进程列表及其pid<br><code>adb shell ps</code></p>
+</li>
+<li><p>杀死指定pid的进程<br><code>adb shell kill pid</code></p>
+</li>
+<li><p>查看指定进程信息<br><code>adb shell ps -x pid</code></p>
+</li>
+</ul>
+<h4 id="6-查看-service"><a href="#6-查看-service" class="headerlink" title="6. 查看 service"></a>6. 查看 service</h4><p>  <code>adb shell service list</code></p>
+<h4 id="7-查看系统当前内存使用情况"><a href="#7-查看系统当前内存使用情况" class="headerlink" title="7. 查看系统当前内存使用情况"></a>7. 查看系统当前内存使用情况</h4><p>  <code>adb shell cat /proc/meminfo</code></p>
+<ul>
+<li>查看指定包名应用内存使用情况<br><code>adb shell dumpsys meminfo package</code></li>
+</ul>
+<h4 id="8-Activity-调试"><a href="#8-Activity-调试" class="headerlink" title="8. Activity 调试"></a>8. Activity 调试</h4><ul>
+<li>启动应用<br><code>adb shell am start -n your.package.name/your.package.name-activity</code></li>
+<li>停止应用<br><code>adb shell am force-stop package</code></li>
+<li>查看当前 Activity 名称<br><code>adb shell dumpsys activity | findstr “mFocusedActivity”</code></li>
+</ul>
+<h3 id="设备应用管理"><a href="#设备应用管理" class="headerlink" title="设备应用管理"></a>设备应用管理</h3><p>（这里推荐一个Android Stuido 插件：<a href="https://github.com/pbreault/adb-idea" target="_blank" rel="external">ADB Idea </a> ）</p>
+<h4 id="1-安装apk"><a href="#1-安装apk" class="headerlink" title="1. 安装apk"></a>1. 安装apk</h4><ul>
+<li><p>安装<br><code>adb install xxx.apk</code></p>
+</li>
+<li><p>覆盖安装(保留缓存和数据)<br><code>adb install -r xxx.apk</code></p>
+</li>
+</ul>
+<h4 id="2-卸载应用"><a href="#2-卸载应用" class="headerlink" title="2. 卸载应用"></a>2. 卸载应用</h4><ul>
+<li><p>卸载<br><code>adb uninstall package</code></p>
+</li>
+<li><p>卸载时保留数据和缓存目录<br><code>adb uninstall -k package</code></p>
+</li>
+</ul>
+<h4 id="3-查看设备应用"><a href="#3-查看设备应用" class="headerlink" title="3. 查看设备应用"></a>3. 查看设备应用</h4><ul>
+<li><p>查看设备所有应用包名<br><code>adb shell pm list packages</code></p>
+</li>
+<li><p>列出指定包名对应的apk路径<br><code>adb shell pm path your.package.name</code></p>
+</li>
+<li><p>清空指定包名对应的应用的数据和缓存文件<br><code>adb shell pm clear your.package.name</code></p>
+</li>
+</ul>
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><ul>
+<li><p>将电脑文件复制到设备sd卡上<br><code>adb push 电脑文件路径  /sdcard</code></p>
+</li>
+<li><p>设备文件复制到电脑上<br><code>adb pull /sdcard/text.txt 电脑文件路径</code></p>
+</li>
+<li><p>删除<br><code>adb shell rm /sdcard/text.txt</code><br> -f 强制删除文件不需要确认<br> -r 递归删除文件夹内文件<br> -i 删除文件前需要确认</p>
+</li>
+<li><p>创建目录<br><code>adb shell mkdir -p  /sdcard/temp/test/</code><br>指定 -p 递归创建目录</p>
+</li>
+<li><p>创建文件<br><code>adb shell touch /sdcard/text.txt</code></p>
+</li>
+<li><p>复制文件<br><code>adb shell cp /sdcard/text.txt  /sdcard/test/</code></p>
+</li>
+<li><p>移动文件<br><code>adb shell mv /sdcard/1.txt /sdcard/2.text</code><br>移动同一目录下文件相当于重命名文件</p>
+</li>
+</ul>
+<h3 id="其他一些命令"><a href="#其他一些命令" class="headerlink" title="其他一些命令"></a>其他一些命令</h3><ul>
+<li><p>申请 toot 权限<br><code>adb shell</code><br><code>su</code></p>
+</li>
+<li><p>查看手机上所有的包名<br><code>adb shell</code><br><code>cd data/data ; ls</code></p>
+</li>
+<li><p><strong>Linux 多个命令行一起执行可以用 “;” 或者 “&amp;&amp;” 进行分割</strong><br><code>cd data/data ; ls</code></p>
+</li>
+<li><p>adb shell 查看文件后退出<br><code>exit</code>  或者 Ctrl + D</p>
+</li>
+</ul>
+<h3 id="adb-官方链接"><a href="#adb-官方链接" class="headerlink" title="adb 官方链接"></a>adb 官方链接</h3><p> <a href="https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn" target="_blank" rel="external">https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Android </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> -adb </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Chrome 快捷键大全]]></title>
       <url>/2018/05/02/%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</url>
       <content type="html"><![CDATA[<p>从2013年开始使用 Chrome 浏览器，简洁好用。以前是用来专门科学上网，后来工作发现 Chrome 是开发必备。今天整理了一下Chrome的快捷键，有些挺常用，熟悉掌握快捷键，甚至不要鼠标就可以装逼了。</p>
